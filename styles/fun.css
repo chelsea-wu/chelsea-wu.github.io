@@ -1,0 +1,39 @@
+body {
+    background-color: #c2d06f;
+    margin: 0;
+    font-family: Josefin Sans;
+}
+
+p {
+    text-align: left;
+    font-size: 30px;
+    color: black;
+    width: 600px;
+}
+
+table, tr, td {
+    border: 1px solid black;
+    color: black;
+    text-align: center;
+    font-size: 30px;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: fit-content;
+}
+
+img {
+    height: 300px;
+    float: right;
+}
+
+div {
+    box-sizing: border-box;
+    display: inline-block;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,41 @@
+body{
+    background-color: #FFB985;
+    margin: 0;
+    font-family: Josefin Sans;
+}
+
+.project-container {
+    padding-top: 10%;
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+img {
+    object-fit: cover;
+    width: 250px;
+    height: 250px;
+  }
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    filter: brightness(80%);
+}
