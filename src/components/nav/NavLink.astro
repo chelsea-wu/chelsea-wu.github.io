@@ -1,0 +1,25 @@
+---
+const {text, to, selected, new_tab} = Astro.props;
+const open_new = Boolean(new_tab); // handles undefined
+---
+
+<a href={to} class={selected ? "selected" : ""} target={open_new ? "_blank" : ""}>{text}</a>
+
+<style>
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: white;
+}
+
+a:hover {
+    color: #3c3951;
+}
+
+a.selected {
+    color: #3c3951;
+}
+
+</style>

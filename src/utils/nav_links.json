@@ -1,0 +1,19 @@
+[
+  {
+    "to": "/",
+    "title": "Home"
+  },
+  {
+    "to": "/projects",
+    "title": "Projects"
+  },
+  {
+    "to": "/hobbies",
+    "title": "Hobbies"
+  },
+  {
+    "to": "/resume.pdf",
+    "title": "Resume",
+    "new_tab": true
+  }
+]

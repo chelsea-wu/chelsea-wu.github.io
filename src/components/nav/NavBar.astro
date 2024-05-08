@@ -1,0 +1,36 @@
+---
+import NavLink from "./NavLink.astro"
+import nav_links from "../../utils/nav_links.json"
+
+const {pathname} = Astro.url;
+---
+
+<nav>
+    <ul>
+        {nav_links.map(route => ( 
+            <li>
+                <NavLink text={route.title} to={route.to} selected={pathname === route.to} new_tab ={route.new_tab}/>
+            </li> 
+        ))}
+    </ul>
+</nav>
+
+<style>
+nav{
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+    font-family: Josefin Sans;
+}
+
+ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    gap: 3rem;
+    color: white;
+}
+
+</style>
