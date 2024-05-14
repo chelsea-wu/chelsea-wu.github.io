@@ -1,6 +1,6 @@
 ---
 const {text, to, selected, new_tab} = Astro.props;
-const open_new = Boolean(new_tab); // handles undefined
+const open_new = !!new_tab; // handles undefined
 ---
 
 <a href={to} class={selected ? "selected" : ""} target={open_new ? "_blank" : ""}>{text}</a>
