@@ -1,5 +1,5 @@
 ---
-
+import ScrollButton from "./ScrollButton.astro"
 ---
 
 <section id="hero">
@@ -17,6 +17,7 @@
         <h1 class="main-title">I am</h1>
         <h1 class="main-title">Chelsea Wu.</h1>
     </div>
+    <ScrollButton href="#about"/>
 </section>
 
 <style>
@@ -36,7 +37,7 @@ section {
 .main-title {
     color: white;
     text-align: center;
-    font-size: 6.5rem;
+    font-size: 8rem;
     margin: 0;
 }
 
@@ -51,5 +52,6 @@ section {
     transform: translateY(-50%);
     z-index: 0;
 }
+
 
 </style>
