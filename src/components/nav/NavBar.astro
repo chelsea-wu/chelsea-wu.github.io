@@ -9,9 +9,9 @@ const background_color = nav_links.find(link => matchPaths(getPath(link.to), pat
 
 <nav style={{backgroundColor: background_color}}>
     <ul>
-        {nav_links.map(route => ( 
+        {nav_links.map(link => ( 
             <li>
-                <NavLink text={route.title} to={getPath(route.to)} selected={pathname === route.to} new_tab ={route.new_tab}/>
+                <NavLink text={link.title} to={getPath(link.to)} selected={matchPaths(getPath(link.to), pathname)} new_tab ={link.new_tab}/>
             </li> 
         ))}
     </ul>
