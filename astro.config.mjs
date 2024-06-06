@@ -1,7 +1,7 @@
 import { defineConfig } from "astro/config";
-const production = import.meta.env.PROD;
+import "dotenv/config";
 
 export default defineConfig({
-  site: production ? "https://chelsea-wu.github.io" : undefined,
-  base: production ? "/new-website" : undefined,
+  site: process.env.ASTRO_SITE,
+  base: process.env.ASTRO_BASE,
 });
