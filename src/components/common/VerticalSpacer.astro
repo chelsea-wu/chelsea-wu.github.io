@@ -1,0 +1,18 @@
+---
+interface Props {
+  height: string
+}
+
+const { height } = Astro.props
+---
+
+<div class="spacer"></div>
+
+
+<style define:vars={{height}}>
+
+.spacer {
+  height: var(--height);
+}
+
+</style>

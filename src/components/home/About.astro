@@ -1,14 +1,57 @@
 ---
+import Image from "astro/components/Image.astro";
+import VerticalSpacer from "../common/VerticalSpacer.astro";
+import chelseaImage from "../../assets/chelsea-about.png";
 
+const blurb = `
+Chelsea Wu is a <strong>product designer</strong> based in <strong>Markham</strong> and studying in <strong>Waterloo</strong>. 
+<br>
+<br>
+Hello! I am Chelsea and I love the process of learning. Ever since I was young I loved being curious about why things were designed the way they were.
+<br>
+<br>
+As a designer, sometimes I can get stuck in routine. To help get myself out of a rut I like to remind myself that people inspire people. For me, design is the consideration of certain people in a certain environment needing a certain something. And that is something I think that is quite beautiful and I believe it deeply.
+<br>
+<br>
+Thank you! 
+<br>
+<br>
+･゜ﾟ･:.｡..｡.:･'(ﾟ▽ﾟ)'･:.｡. .｡.:･゜ﾟ･
+`;
 ---
 
 <section id="about">
-
+  <VerticalSpacer height="32px" />
+  <Image
+    id="chelsea-about"
+    src={chelseaImage}
+    alt="A picture of Chelsea holding a snowboard."
+  />
+  <VerticalSpacer height="32px" />
+  <p set:html={blurb} />
 </section>
 
 <style>
-section {
+  section {
+    min-width: 100%;
     min-height: 100vh;
-}
-</style>
+  }
+  #chelsea-about {
+    display: block;
+    width: clamp(300px, 78.6%, 1024px);
 
+    margin: 0 auto; /* Centers the image horizontally */
+    height: auto; /* Maintains aspect ratio */
+  }
+  p {
+    color: #5f5a88;
+    text-align: center;
+    font-family: "Josefin Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: clamp(300px, 40%, 1024px);
+    margin: 0 auto;
+  }
+</style>

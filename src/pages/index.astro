@@ -1,15 +1,17 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Hero from "../components/home/Hero.astro"
-import About from "../components/home/About.astro"
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/home/Hero.astro";
+import About from "../components/home/About.astro";
+import Contact from "../components/home/Contact.astro";
+import { HOME } from "../utils/page_info";
 ---
 
-<Layout title="Home">
-	<main>
-		<Hero/>
-		<About/>
-	</main>
+<Layout page={HOME}>
+  <main>
+    <Hero />
+    <About />
+    <Contact />
+  </main>
 </Layout>
 
-<style>
-</style>
+<style></style>
