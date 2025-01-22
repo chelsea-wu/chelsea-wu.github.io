@@ -3,15 +3,17 @@ export const PROJECTS = "projects";
 export const GALLERY = "gallery";
 export const RESUME = "resume";
 
-export type PageState = {
-  [key: string]: {
-    background: string;
-    title: string;
-    navFlow?: boolean;
-  };
+export type PageStates = {
+  [key: string]: PageState;
 };
 
-export const page_state: PageState = {
+type PageState = {
+  background: string;
+  title: string;
+  navFlow: boolean;
+};
+
+export const page_state: PageStates = {
   [HOME]: {
     background: "#BCB4FF",
     title: "Home",
@@ -20,9 +22,11 @@ export const page_state: PageState = {
   [PROJECTS]: {
     background: "#EDB4F8",
     title: "Projects",
+    navFlow: true,
   },
   [GALLERY]: {
     background: "#FFB985",
     title: "Gallery",
+    navFlow: true,
   },
 };
