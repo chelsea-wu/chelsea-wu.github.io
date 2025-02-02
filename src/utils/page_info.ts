@@ -1,32 +1,29 @@
-export const HOME = "home";
-export const PROJECTS = "projects";
-export const GALLERY = "gallery";
-export const RESUME = "resume";
+export enum Pages {
+  HOME = "home",
+  PROJECTS = "projects",
+  GALLERY = "gallery",
+  RESUME = "resume",
+}
 
-export type PageStates = {
-  [key: string]: PageState;
-};
-
-type PageState = {
-  background: string;
-  title: string;
-  navFlow: boolean;
-};
-
-export const page_state: PageStates = {
-  [HOME]: {
+export const page_info = {
+  [Pages.HOME]: {
     background: "#BCB4FF",
     title: "Home",
-    navFlow: false,
+    href: "/",
   },
-  [PROJECTS]: {
+  [Pages.PROJECTS]: {
     background: "#EDB4F8",
     title: "Projects",
-    navFlow: true,
+    href: "/projects",
   },
-  [GALLERY]: {
+  [Pages.GALLERY]: {
     background: "#FFB985",
     title: "Gallery",
-    navFlow: true,
+    href: "/gallery",
+  },
+  [Pages.RESUME]: {
+    title: "Resume",
+    href: "/resume",
+    target: "_blank",
   },
 };

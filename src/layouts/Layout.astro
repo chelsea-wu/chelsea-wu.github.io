@@ -1,13 +1,13 @@
 ---
 import Nav from "../components/nav/NavBar.astro";
-import { page_state } from "../utils/page_info";
+import { page_info } from "../utils/page_info";
 
 interface Props {
   page: string;
 }
 
 const { page } = Astro.props;
-const { background, title, navFlow } = page_state[page];
+const { background, title } = page_info[page];
 ---
 
 <!doctype html>
@@ -30,7 +30,7 @@ const { background, title, navFlow } = page_state[page];
     <title>{title}</title>
   </head>
   <body>
-    <Nav inFlow={navFlow!!} />
+    <Nav />
     <slot />
   </body>
 </html>
