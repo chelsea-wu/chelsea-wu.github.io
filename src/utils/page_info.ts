@@ -23,7 +23,7 @@ export const page_info = {
   },
   [Pages.RESUME]: {
     title: "Resume",
-    href: "/resume",
+    href: "/resume.pdf",
     target: "_blank",
   },
 };
