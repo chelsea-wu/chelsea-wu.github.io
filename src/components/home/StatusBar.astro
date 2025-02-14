@@ -1,10 +1,19 @@
 ---
+interface Props {
+  status: "searching" | "working";
+}
+const status_messages = {
+  searching: "Open for work",
+  working: "Hard at work",
+};
 
+const { status } = Astro.props;
+const current_message = status_messages[status];
 ---
 
 <div id="chelsea-status">
-  <div id="status-circle"></div>
-  <div>Status: <span>Open for Work</span></div>
+  <div id="status-circle" class={status}></div>
+  <div>Status: {current_message}</div>
 </div>
 
 <style>
@@ -16,20 +25,29 @@
     box-shadow: 5px 4px 4px 0px rgba(0, 0, 0, 0.25);
     width: fit-content;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 9px;
   }
 
   #chelsea-status > * {
-    display: inline-block;
-    vertical-align: middle;
+    line-height: 24px;
     font-size: 24px;
     color: #5f5a88;
     font-weight: 500;
   }
 
   #status-circle {
-    aspect-ratio: 1;
     width: 25px;
-    background-color: #b7f39d;
+    height: 25px;
     border-radius: 50%;
+  }
+
+  .searching {
+    background-color: #b7f39d;
+  }
+
+  .working {
+    background-color: #ff6961;
   }
 </style>
