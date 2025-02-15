@@ -1,0 +1,20 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Pages } from "../../utils/page_info";
+import ProjectsList from "../../components/projects/ProjectsList.astro";
+import Heading from "../../components/common/Heading.astro";
+---
+
+<Layout page={Pages.PROJECTS}>
+  <main>
+    <Heading class="projects-heading">Projects</Heading>
+
+    <ProjectsList />
+  </main>
+</Layout>
+
+<style is:global>
+  .projects-heading {
+    color: #684148;
+  }
+</style>

@@ -1,0 +1,24 @@
+---
+interface Props {
+  font_size?: string;
+  class: string;
+}
+
+const { font_size, class: className } = Astro.props;
+
+function getFontSize() {
+  return font_size ? font_size : "36px";
+}
+---
+
+<h1 class={className}><slot /></h1>
+
+<style define:vars={{ fontSize: getFontSize() }}>
+  h1 {
+    font-size: var(--fontSize);
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+    padding: 32px 0;
+  }
+</style>
