@@ -1,5 +1,23 @@
 ---
+import ProjectDescription from "./ProjectDescription.astro"
+import { projects } from "./projects.ts"
+import type { Project } from "./projects"
 
 ---
 
-<style></style>
+<div class="projects-container">
+    {projects.map((project: Project) => (
+    <ProjectDescription {...project} />
+    ))}
+</div>
+
+<style>
+    .projects-container{
+        max-width: 680px;
+        padding: 24px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+    }
+</style>
