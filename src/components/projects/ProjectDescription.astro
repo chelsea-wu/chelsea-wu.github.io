@@ -1,24 +1,13 @@
 ---
-import type { ImageMetadata } from 'astro';
 import Image from 'astro/components/Image.astro';
 import VerticalSpacer from '../common/VerticalSpacer.astro';
+import { type Project } from "./projects"
 
-interface Props {
-    title: string;
-    href: string;
-    description: string;
-    tags: string[];
-    imgPath: string;
-}
+type Props = Project;
 
-const { title, href, description, tags, imgPath } = Astro.props
+const { title, href, description, tags, img } = Astro.props;
 
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/projects/*.{jpeg,jpg,png,gif}');
-
-if (!images[imgPath]) throw new Error(`"${imgPath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`);
-
-const imgSrc = (await images[imgPath]()).default;
-
+const { default: img_meta } = ( await img );
 ---
 
 <a href={href}>
@@ -32,7 +21,7 @@ const imgSrc = (await images[imgPath]()).default;
         ))}
     </div>
     <VerticalSpacer height="16px"/>
-    <Image class="project-image" src={imgSrc} alt="A picture of a soap bottle"/>
+    <Image class="project-image" src={img_meta} alt="A picture of a soap bottle"/>
 </a>
 
 

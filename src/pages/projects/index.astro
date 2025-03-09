@@ -1,13 +1,18 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import { Pages } from "../../utils/page_info";
 import ProjectsList from "../../components/projects/ProjectsList.astro";
 import Heading from "../../components/common/Heading.astro";
+
+export const layout_props = {
+  background : "#EDB4F8",
+  title : "Projects",
+}
+
 ---
 
-<Layout page={Pages.PROJECTS}>
+<Layout { ...layout_props }>
   <main>
-    <Heading class="projects-heading">Projects</Heading>
+    <Heading>Projects</Heading>
 
     <ProjectsList />
   </main>

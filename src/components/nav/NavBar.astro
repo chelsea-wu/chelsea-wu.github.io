@@ -1,12 +1,12 @@
 ---
 import NavLink from "./NavLink.astro";
-import { page_info } from "../../utils/page_info";
+import nav_links from "./nav_links";
 ---
 
 <nav id="chelsea-nav">
   <ul>
     {
-      Object.values(page_info).map((link) => (
+      nav_links.map((link) => (
         <li>
           <NavLink {...link} selected={Astro.url.pathname === link.href} />
         </li>

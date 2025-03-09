@@ -1,0 +1,32 @@
+---
+import Layout, { type Props as DefaultProps } from "./Layout.astro";
+import Heading from "../components/common/Heading.astro";
+
+type Props = DefaultProps & {
+    header: string | undefined;
+};
+
+const { header, ...default_props } = Astro.props;
+
+---
+
+<Layout { ...default_props }>
+    <main>
+        <Heading>{header}</Heading>
+        <slot></slot>
+    </main>
+</Layout>
+
+
+<style is:global>
+    p {
+        text-align: center;
+        font-family: "Josefin Sans";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        width: clamp(300px, 40%, 1024px);
+        margin: 0 auto;
+    }
+</style>

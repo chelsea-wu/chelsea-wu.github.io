@@ -1,9 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Pages } from "../utils/page_info";
+
+const layout_props = {
+  background : "#FFB985",
+  title : "Galery",
+}
+
 ---
 
-<Layout page={Pages.GALLERY}>
+<Layout { ...layout_props }>
   <main>Under Construction!</main>
 </Layout>
 
