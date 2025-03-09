@@ -7,7 +7,7 @@ type Props = Project;
 
 const { title, href, description, tags, img } = Astro.props;
 
-const { default: img_meta } = ( await img );
+const { default: img_meta } = await img;
 ---
 
 <a href={href}>
