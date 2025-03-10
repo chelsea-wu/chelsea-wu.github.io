@@ -1,8 +1,87 @@
 ---
-import ProjectLayout from "../../layouts/ProjectLayout.astro"
-import { layout_props } from "./index.astro"
+import ProjectLayout from "../../layouts/ProjectLayout.astro";
+import { layout_props } from "./index.astro";
+import softsoap1 from "../../assets/projects/soft-soap/soft-soap-1.png";
+import softsoap2 from "../../assets/projects/soft-soap/soft-soap-2.png";
+import softsoap3 from "../../assets/projects/soft-soap/soft-soap-3.png";
+import softsoap4 from "../../assets/projects/soft-soap/soft-soap-4.png";
+import softsoap5 from "../../assets/projects/soft-soap/soft-soap-5.mp4";
+import Image from "astro/components/Image.astro";
+import VerticalSpacer from "../../components/common/VerticalSpacer.astro";
 ---
 
-<ProjectLayout { ...layout_props } header="Softsoap">
-    <p>hihihii</p>
+<ProjectLayout {...layout_props} header="Softsoap">
+  <Image class="image" src={softsoap1} alt="A picture of a soap bottle" />
+  <VerticalSpacer height="32px" />
+  <h2>Overview</h2>
+  <p>
+    Our assignment focused on collaborating with a partner to rebrand a company
+    of our choice. My partner and I selected Softsoap, a well-known brand
+    specializing in hygiene products.
+  </p>
+  <p>
+    Recognizing its potential, my partner, Soomin Lee and I, aimed to enhance
+    the company's appeal while preserving its existing image and reputation. Our
+    goal was to make subtle adjustments to better align the brand with the
+    preferences of its current audience.
+  </p>
+  <h2>What Did I Learn</h2>
+  <p>
+    Initially, we created a mood board on how we wanted to approach the task.
+    Specifically, to modernize the brand while preserving its unique charm.
+  </p>
+  <p>
+    We saw that Softsoap was a brand that wanted to reach everyone. So we
+    decided to incorporate more of their bright and fun ideals into our
+    moodboard, to emphasize a more welcoming and approachable identity.
+  </p>
+
+  <Image class="image" src={softsoap2} alt="A picture of a soap bottle" />
+  <VerticalSpacer height="32px" />
+
+  <p>
+    The moodboard helped convey what we wanted excctly into our design, the
+    bright and fun colours alongside organic shapes. This appearance is
+    definitely more welcoming and will help draw in new customers.
+  </p>
+
+  <Image class="image" src={softsoap3} alt="A picture of a soap bottle" />
+  <VerticalSpacer height="32px" />
+
+  <p>
+    For the “big idea” of our assignment we focused on the phrase “Refreshing
+    the original”. After the ideation phase, we were able to progress into
+    building the brand’s new look. We created two logo designs which can be used
+    interchangeably.
+  </p>
+
+  <Image class="image" src={softsoap4} alt="A picture of a soap bottle" />
+  <VerticalSpacer height="32px" />
+
+  <p>
+    Afterwords, we were able to play around with it more and create mockups of
+    the new product and fun advertisements that might appeal to our target
+    audience.
+  </p>
+
+  <video class="video" src={softsoap5} autoplay loop muted playsinline></video>
 </ProjectLayout>
+
+<style>
+  .image {
+    width: 100%;
+    max-width: 680px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .video {
+    width: auto;
+    max-height: 80vh; /* Keep aspect ratio */
+    display: block; /* Centering */
+    margin: 0 auto; /* Center horizontally */
+    border-radius: 8px; /* Optional: rounded corners */
+    object-fit: cover; /* Optional: control how video fits */
+  }
+</style>

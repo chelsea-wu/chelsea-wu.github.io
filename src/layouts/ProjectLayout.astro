@@ -19,8 +19,11 @@ const { header, ...default_props } = Astro.props;
 
 
 <style is:global>
+    main {
+        padding-bottom: 96px;
+    }
     p {
-        text-align: center;
+        text-align: left;
         font-family: "Josefin Sans";
         font-size: 24px;
         font-style: normal;
@@ -28,5 +31,17 @@ const { header, ...default_props } = Astro.props;
         line-height: normal;
         width: clamp(300px, 40%, 1024px);
         margin: 0 auto;
+        margin-bottom: 1.5em;
+    }
+    h2 {
+        text-align: left;
+        font-family: "Josefin Sans";
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        width: clamp(300px, 40%, 1024px);
+        margin-left: auto;
+        margin-right: auto;
     }
 </style>

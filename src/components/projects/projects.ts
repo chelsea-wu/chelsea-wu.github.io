@@ -15,7 +15,7 @@ export const projects: Project[] = [
       "Re-branding assignment to emphasize on longevity and adapting to current trends while still maintaining the youthful vibrancy that the brand currently has",
     href: "/projects/soft-soap",
     tags: ["Adobe Illustrator", "Figma", "Procreate"],
-    img: import("/src/assets/projects/soft-soap.png"),
+    img: import("/src/assets/projects/soft-soap/thumbnail.png"),
   },
   {
     title: "Escape",
@@ -23,6 +23,6 @@ export const projects: Project[] = [
       "Incorporating augmented reality into graphic design to help address the rise of mental health challenges in undergraduate students, by creating our own solution.",
     href: "/projects/escape",
     tags: ["Figma", "Research", "Augmented Reality"],
-    img: import("/src/assets/projects/escape.png"),
+    img: import("/src/assets/projects/escape/thumbnail.png"),
   },
 ];
