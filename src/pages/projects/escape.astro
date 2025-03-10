@@ -1,0 +1,28 @@
+---
+import ProjectLayout from "../../layouts/ProjectLayout.astro";
+import { layout_props } from "./index.astro";
+import escape1 from "../../assets/projects/soft-soap/soft-soap-1.png";
+import Image from "astro/components/Image.astro";
+import VerticalSpacer from "../../components/common/VerticalSpacer.astro";
+---
+
+<ProjectLayout {...layout_props} title="Escape" header="Escape" />
+
+<style>
+  .image {
+    width: 100%;
+    max-width: 680px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .video {
+    width: auto;
+    max-height: 80vh;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+</style>
