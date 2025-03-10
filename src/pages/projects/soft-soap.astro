@@ -10,7 +10,7 @@ import Image from "astro/components/Image.astro";
 import VerticalSpacer from "../../components/common/VerticalSpacer.astro";
 ---
 
-<ProjectLayout {...layout_props} header="Softsoap">
+<ProjectLayout {...layout_props} title="Softsoap" header="Softsoap">
   <Image class="image" src={softsoap1} alt="A picture of a soap bottle" />
   <VerticalSpacer height="32px" />
   <h2>Overview</h2>
@@ -78,10 +78,10 @@ import VerticalSpacer from "../../components/common/VerticalSpacer.astro";
 
   .video {
     width: auto;
-    max-height: 80vh; /* Keep aspect ratio */
-    display: block; /* Centering */
-    margin: 0 auto; /* Center horizontally */
-    border-radius: 8px; /* Optional: rounded corners */
-    object-fit: cover; /* Optional: control how video fits */
+    max-height: 80vh;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    object-fit: cover;
   }
 </style>
