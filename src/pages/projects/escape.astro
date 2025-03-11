@@ -1,28 +1,103 @@
 ---
 import ProjectLayout from "../../layouts/ProjectLayout.astro";
 import { layout_props } from "./index.astro";
-import escape1 from "../../assets/projects/soft-soap/soft-soap-1.png";
+import escape1 from "../../assets/projects/escape/escape-1.png";
+import escape2 from "../../assets/projects/escape/escape-2.png";
+import escape3 from "../../assets/projects/escape/escape-3.png";
+import escape4 from "../../assets/projects/escape/escape-4.png";
+import escape5 from "../../assets/projects/escape/escape-5.png";
+import escape6 from "../../assets/projects/escape/escape-6.png";
+import escape7 from "../../assets/projects/escape/escape-7.png";
+import escape8 from "../../assets/projects/escape/escape-8.png";
 import Image from "astro/components/Image.astro";
 import VerticalSpacer from "../../components/common/VerticalSpacer.astro";
 ---
 
-<ProjectLayout {...layout_props} title="Escape" header="Escape" />
+<ProjectLayout {...layout_props} title="Escape" header="Escape">
+  <Image class="image" src={escape1} alt="a menu screen" />
+
+  <h2>Overview</h2>
+  <p>
+    This assignment was focused on creating a product that was to help resolve
+    our main product of research. My group consisted of myself, Soomin Lee, and
+    Makenzie Chiu. We decided to focus on developing a solution for
+    undergraduates that struggle with their mental health.
+  </p>
+  <p>
+    We each researched separately on different factors that can help people cope
+    with their stressors. After collecting our data, we decided that we wanted
+    to focus on the usage of music and how it helped students de-stress.
+  </p>
+  <p>
+    Thus we created “Escape”, a product to help students “escape” by immersing
+    them into dreamlike environments. It allowed them customization of music and
+    location. By using the VR device it allows the user to be placed in multiple
+    locations with a variety of music of their choosing.
+  </p>
+  <div class="image-grid">
+    <Image class="image" src={escape2} alt="scenery" />
+    <Image class="image" src={escape3} alt="scenery" />
+    <Image class="image" src={escape4} alt="scenery" />
+    <Image class="image" src={escape5} alt="scenery" />
+  </div>
+
+  <p>
+    Within this assignment, we needed to create an interface for our product.
+    Meaning that we needed to create a style guide to ensure that all of our
+    pieces remained consistent through the application.
+  </p>
+
+  <Image class="image" src={escape6} alt="style guide" />
+  <p>
+    Once we created the style guide we distributed the tasks and worked on the
+    different screens that would be displayed. The first part of the assignment
+    was to create a low fidelity prototype that gave a brief look into our
+    application.
+  </p>
+
+  <Image class="image" src={escape7} alt="screens" />
+
+  <p>
+    Afterwards, we reviewed the screens between ourselves and our professor. We
+    discussed the different things we could improved and moved towards the high
+    fidelity portion of our assignment. Some things we discussed were basic
+    touch ups, while other things we wanted to consider were things like, making
+    our product more accessible.
+  </p>
+
+  <Image class="image" src={escape8} alt="screens" />
+  <p>
+    To encourage more accesible use to our product we allowed customization
+    thoughout the application, on things like font size, colours, and volume.
+  </p>
+  <p>
+    After the completion of the low and high fidelity versions of our products
+    we structured user testing sessions and compared our findings between them.
+    Within the tests we encouraged the testers to point out anything that were
+    having issues with and how they would personally change certain things.
+  </p>
+  <p>
+    The final outcome was definitely something my group and I were quite
+    surprised about. We were quite proud of how everything was run and how we
+    greatly improved since the beginning of the course. We learned a variety of
+    techniques and different technologies that people use to create augmented
+    realities. Overall, we were quite grateful and it encouraged us to place
+    ourselves outside of our comfort zones.
+  </p>
+</ProjectLayout>
 
 <style>
-  .image {
-    width: 100%;
-    max-width: 680px;
-    height: auto;
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: fit-content;
     margin: 0 auto;
-    display: block;
+    margin-bottom: 1.5em;
+    gap: 12px;
   }
 
-  .video {
-    width: auto;
-    max-height: 80vh;
-    display: block;
-    margin: 0 auto;
-    border-radius: 8px;
-    object-fit: cover;
+  .image-grid .image {
+    aspect-ratio: 1;
   }
 </style>

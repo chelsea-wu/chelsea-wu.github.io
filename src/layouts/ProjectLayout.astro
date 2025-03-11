@@ -3,45 +3,60 @@ import Layout, { type Props as DefaultProps } from "./Layout.astro";
 import Heading from "../components/common/Heading.astro";
 
 type Props = DefaultProps & {
-    header: string | undefined;
+  header: string | undefined;
 };
 
 const { header, ...default_props } = Astro.props;
-
 ---
 
-<Layout { ...default_props }>
-    <main>
-        <Heading>{header}</Heading>
-        <slot></slot>
-    </main>
+<Layout {...default_props}>
+  <main>
+    <Heading>{header}</Heading>
+    <slot />
+  </main>
 </Layout>
 
-
 <style is:global>
-    main {
-        padding-bottom: 96px;
-    }
-    p {
-        text-align: left;
-        font-family: "Josefin Sans";
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        width: clamp(300px, 40%, 1024px);
-        margin: 0 auto;
-        margin-bottom: 1.5em;
-    }
-    h2 {
-        text-align: left;
-        font-family: "Josefin Sans";
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-        width: clamp(300px, 40%, 1024px);
-        margin-left: auto;
-        margin-right: auto;
-    }
+  main {
+    padding-bottom: 96px;
+    font-size: 24px;
+  }
+  p {
+    text-align: left;
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: clamp(300px, 40%, 1024px);
+    margin: 0 auto;
+    margin-bottom: 1.5em;
+  }
+  h2 {
+    text-align: left;
+    font-family: "Josefin Sans";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    width: clamp(300px, 40%, 1024px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .image {
+    margin: 1.5em;
+    width: 100%;
+    max-width: 680px;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 1.5em;
+    display: block;
+  }
+  .video {
+    width: auto;
+    max-height: 80vh;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
 </style>
