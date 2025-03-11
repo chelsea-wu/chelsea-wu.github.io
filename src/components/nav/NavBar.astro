@@ -8,7 +8,14 @@ import nav_links from "./nav_links";
     {
       nav_links.map((link) => (
         <li>
-          <NavLink {...link} selected={Astro.url.pathname === link.href} />
+          <NavLink
+            {...link}
+            selected={
+              link.href === "/"
+                ? Astro.url.pathname === link.href
+                : Astro.url.pathname.startsWith(link.href)
+            }
+          />
         </li>
       ))
     }
