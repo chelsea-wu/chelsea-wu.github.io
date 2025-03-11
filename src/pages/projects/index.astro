@@ -1,0 +1,25 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProjectsList from "../../components/projects/ProjectsList.astro";
+import Heading from "../../components/common/Heading.astro";
+
+export const layout_props = {
+  background : "#EDB4F8",
+  title : "Projects",
+}
+
+---
+
+<Layout { ...layout_props }>
+  <main>
+    <Heading>Projects</Heading>
+
+    <ProjectsList />
+  </main>
+</Layout>
+
+<style is:global>
+  * {
+    color: #684148;
+  }
+</style>

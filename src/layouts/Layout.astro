@@ -1,13 +1,12 @@
 ---
 import Nav from "../components/nav/NavBar.astro";
-import { page_info } from "../utils/page_info";
 
-interface Props {
-  page: string;
+export interface Props {
+  background: string;
+  title: string;
 }
 
-const { page } = Astro.props;
-const { background, title } = page_info[page];
+const { background, title } = Astro.props;
 ---
 
 <!doctype html>

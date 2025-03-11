@@ -1,0 +1,60 @@
+---
+import Image from 'astro/components/Image.astro';
+import VerticalSpacer from '../common/VerticalSpacer.astro';
+import { type Project } from "./projects"
+
+type Props = Project;
+
+const { title, href, description, tags, img } = Astro.props;
+
+const { default: img_meta } = await img;
+---
+
+<a href={href}>
+    <h2>{title}</h2>
+    <VerticalSpacer height="12px"/>
+    <p>{description}</p>
+    <VerticalSpacer height="16px"/>
+    <div class="tags">
+        {tags.map(tag => (
+            <span class="tag">{tag}</span>
+        ))}
+    </div>
+    <VerticalSpacer height="16px"/>
+    <Image class="project-image" src={img_meta} alt="A picture of a soap bottle"/>
+</a>
+
+
+<style>
+    .project-image{
+        width: 100%;
+        height: auto;
+    }
+    a {
+        text-decoration: unset;
+        color: unset;
+    }
+    h2 {
+        font-size: 32px;
+        margin: 0;
+    }
+    p {
+        font-size: 20px;
+        margin: 0;
+    }
+
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .tag {
+        border-radius: 30px;
+        border: 1px solid #684148;
+        background: rgba(217, 217, 217, 0.00);
+        padding: 9px;
+        font-weight: 600;
+        font-size: 20px;
+    }
+</style>
