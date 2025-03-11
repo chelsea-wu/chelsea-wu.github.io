@@ -1,22 +1,23 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Heading from "../components/common/Heading.astro";
+import Gallery from "../components/gallery/Gallery.astro";
 
 const layout_props = {
-  background : "#FFB985",
-  title : "Galery",
-}
-
+  background: "#FFB985",
+  title: "Galery",
+};
 ---
 
-<Layout { ...layout_props }>
-  <main>Under Construction!</main>
+<Layout {...layout_props}>
+  <main>
+    <Heading>Gallery</Heading>
+    <Gallery />
+  </main>
 </Layout>
 
 <style>
   main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 100px;
+    color: white;
   }
 </style>

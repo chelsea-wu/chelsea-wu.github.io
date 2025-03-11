@@ -1,0 +1,20 @@
+---
+import Image from "astro/components/Image.astro";
+import type { ImageMetadata } from "astro";
+
+const images = Object.values(
+  import.meta.glob<{ default: ImageMetadata }>("/src/assets/gallery/*")
+);
+---
+
+<div class="gallery">
+  {
+    images.map((image) => {
+      return (
+        <div class="gallery-item">
+          <Image src={image()} alt="" loading="lazy" />
+        </div>
+      );
+    })
+  }
+</div>
